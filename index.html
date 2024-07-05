@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="./src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+</head>
+
+<body>
+  <div
+    class="w-full min-h-screen bg-[#040711] text-white bg-no-repeat  pt-[92px] pb-16 px-10 flex flex-col gap-12 items-center "
+    style="background-image: url(/images/hero_img.jpg);background-size: 100% auto;">
+    <div class="flex justify-center items-center">
+      <img src="/images/logo.svg" alt="">
+    </div>
+    <div class="max-w-[1136px] w-full grid grid-cols-2 gap-4 max-lg:grid-cols-1">
+      <!-- ############### -->
+      <div class="w-full h-[339px] bg-[#21293680] rounded-3xl p-6 flex flex-col border border-[#4D5562] ">
+        <div class=" text-[14px] text-[#6C727F] font-bold pb-4 border-b border-[#394150]">
+          <div class="flex items-center gap-6 h-[34px] ">
+            <span>Detect Language</span>
+            <span class="selectedFrom cursor-pointer">English</span>
+            <span class="selectedFrom cursor-pointer">French</span>
+            <div id="dropdownFrom" class="dropdown relative h-full flex items-center">
+              <span class="selectedFrom cursor-pointer flex items-center gap-1">
+                <span>Spanish</span>
+                <img src="/images/Expand_down.svg" alt="">
+              </span>
+              <div id="dropdown-content"
+                class="dropdown-content flex-col absolute scrollbar-hidden  max-h-[134.37px] overflow-y-auto top-full right-0 min-w-max border border-[#4D5562] bg-[#040711]">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ############### -->
+        <div class="flex-auto ">
+          <textarea name="" maxlength="500" id="textID"
+            class="scrollbar-custom w-full h-full resize-none bg-transparent outline-none py-6 text-base text-[#F9FAFB] font-bold">Hello, how are you?</textarea>
+        </div>
+        <!-- ############### -->
+        <div class="w-full flex justify-between items-end">
+          <div class="flex gap-2">
+            <span class="w-9 h-9 flex justify-center items-center border-2 border-[#4D5562] rounded-xl cursor-pointer">
+              <img src="./public/images/sound_max_fill.svg" alt="">
+            </span>
+            <span class="w-9 h-9 flex justify-center items-center border-2 border-[#4D5562] rounded-xl cursor-pointer">
+              <img src="./public/images/Copy.svg" alt="">
+            </span>
+          </div>
+          <div class="flex flex-col items-end gap-3">
+            <span class="text-xs font-medium text-[#6C727F]">19/500</span>
+            <span id="translateBtn"
+              class="flex items-center justify-center gap-3 w-[152px] h-12 bg-[#3662E3] text-[#F9FAFB] text-base font-bold rounded-xl border border-[#7CA9F3] cursor-pointer">
+              <img src="/images/Sort_alfa.svg" alt="">
+              <span>Translate</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- ############### -->
+      <div class="w-full h-[339px] bg-[#21293680] rounded-3xl p-6 flex flex-col border border-[#4D5562]">
+        <div class="w-full pb-4 border-b border-[#394150]">
+          <div class="w-full flex justify-between h-[34px]">
+            <div class="flex items-center gap-6 text-[14px] text-[#6C727F] font-bold ">
+              <span class="selectedTo cursor-pointer">English</span>
+              <span class="selectedTo cursor-pointer">French</span>
+              <div id="dropdownTo" class="dropdown relative h-full flex items-center">
+                <span class="selectedTo cursor-pointer flex items-center gap-1">
+                  <span>Spanish</span>
+                  <img src="/images/Expand_down.svg" alt="">
+                </span>
+                <div id="dropdown-content"
+                  class="dropdown-content flex-col absolute scrollbar-hidden  max-h-[134.67px] overflow-y-auto top-full right-0 min-w-max border border-[#4D5562] bg-[#040711]">
+                </div>
+              </div>
+            </div>
+            <span
+              class="w-[34px] h-full flex justify-center items-center border-2 border-[#4D5562] rounded-xl cursor-pointer">
+              <img src="/images/Horizontal_top_left_main.svg" alt="">
+            </span>
+          </div>
+        </div>
+        <!-- ############### -->
+        <div class="flex-auto">
+          <div id="translationContent"
+            class="scrollbar-custom w-full h-full overflow-y-auto resize-none bg-transparent outline-none py-6 text-base text-[#F9FAFB] font-bold">
+            Bonjour, comment allez-vous ?</div>
+        </div>
+        <!-- ############### -->
+        <div class="flex gap-2">
+          <span class="w-9 h-9 flex justify-center items-center border-2 border-[#4D5562] rounded-xl cursor-pointer">
+            <img src="./public/images/sound_max_fill.svg" alt="">
+          </span>
+          <span class="w-9 h-9 flex justify-center items-center border-2 border-[#4D5562] rounded-xl cursor-pointer">
+            <img src="./public/images/Copy.svg" alt="">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts" defer></script>
+</body>
+
+</html>
